@@ -16,5 +16,5 @@ interface SourceList<T> {
 
   public SourceList<T> filter(BooleanCondition cond);
 
-  public SourceList<U> map(Transformer<Object, U> trans); 
+  public <U> SourceList<U> map(Transformer<? super T, ? extends U> trans); 
 }

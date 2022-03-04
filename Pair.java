@@ -66,7 +66,7 @@ public class Pair<T> implements SourceList<T> {
   }
 
   @Override
-  public SourceList<U> map(Transformer<Object, U> trans) {
+  public <U> SourceList<U> map(Transformer<? super T, ? extends U> trans) {
     return new Pair<U>(trans.transform(this.first), this.second.map(trans));
   }
 }

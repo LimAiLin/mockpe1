@@ -43,7 +43,7 @@ class EmptyList<T> implements SourceList<T> {
   }
 
   @Override
-  public SourceList<U> map(Transformer<Object, U> trans) {
+  public <U> SourceList<U> map(Transformer<? super T, ? extends U> trans) {
     return new EmptyList<U>();
   }
 }
