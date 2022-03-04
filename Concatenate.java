@@ -7,7 +7,7 @@ class Concatenate extends Operation {
   }
 
   @Override
-  public Object eval(){
+  public Object eval() {
     Expression e1 = super.getFirst();
     Expression e2 = super.getSecond();
     if (e1.eval() instanceof String && e2.eval() instanceof String) {
